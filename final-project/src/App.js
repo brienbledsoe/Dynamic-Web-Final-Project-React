@@ -4,7 +4,6 @@ import React, {useEffect,useState} from 'react';
 import {Route,BrowserRouter as Router, Redirect} from 'react'
 import Header from "./components/Header";
 import Login from "./pages/Login";
-import Logout from "./pages/Logout/index.js"
 import Signup from "./pages/Signup";
 import UserProfile from "./pages/UserProfile";
 import  * as firebase from "firebase/app";
