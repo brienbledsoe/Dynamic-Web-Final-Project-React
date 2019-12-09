@@ -1,7 +1,7 @@
-// import logo from './logo.svg';
 import './App.css';
+//Components & Pages to IMPORT
 import React, {useEffect,useState} from 'react';
-import {Route,BrowserRouter as Router, Redirect} from 'react'
+import {Route,BrowserRouter as Router, Redirect} from 'react-router-dom'
 import Header from "./components/Header";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
@@ -27,15 +27,18 @@ function App() {
   useEffect(() => {
   //initialize firebase
   if(!firebase.apps.length){
-      firebase.initialize(firebaseConfig);
+      firebase.initializeApp(firebaseConfig);
   }
   firebase
   .auth()
   .setPersistence(firebase.auth.Auth.Persistence.SESSION)
-  .Catch(function(error){
+  .catch(function(error){
     console.log('error', error);
   });
-
+  //=================================================================================================
+  //TRYING TO SEE WHATS IN FIREBASE.AUTH AND FIREBASE.APPS
+console.log("Firebase object: ", firebase.apps)
+console.log("Who is author: ", firebase.auth())
 },[firebaseConfig])
 
 useEffect(() => {
@@ -92,22 +95,23 @@ function logoutFunction(){
   });
 }
 
-console.log("testing user two: ", user);
-
+console.log("testing user two: ", user)
+//console.log("logging Author: ",firebase.auth())
   return (
     <div className="App">
-      <Header loggedIn={loggedIn} logoutFunction={logoutFunction}/>
+    <Header loggedIn={loggedIn} logoutFunction={logoutFunction}/>
       <Router>
-        <Route exact path="/">
-          {loggedIn ? <UserProfile user={user}/> : <Redirect to="login" />}
-        </Route>
+
+      <Route exact path="/">
+        { loggedIn ? <UserProfile user={user}/> : <Redirect to="login" />}
+      </Route>
 
         <Route exact path="/login">
-          {loggedIn ? <Redirect to="/"/> : <Login loginfunction={loginFunction} />}
+          { loggedIn ? <Redirect to="/"/> : <Login loginFunction={loginFunction} />}
         </Route>
 
         <Route exact path="/sign-up">
-          {loggedIn ? <Redirect to="/"/> : <Signup signupFunction={signupFunction} />}
+          { loggedIn ? <Redirect to="/"/> : <Signup signupFunction={signupFunction} />}
         </Route>
 
       </Router>
