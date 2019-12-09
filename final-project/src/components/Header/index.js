@@ -11,3 +11,4 @@ export default function Header( {loggedIn, logoutFunction} ){
     </nav>
     </header>
   )
+}

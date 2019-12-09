@@ -62,7 +62,7 @@ function signupFunction(e){
     .auth()
     .createUserWithEmailAndPassword(email,password)
     .then(function(response){
-      setloggedIn(true);
+      setLoggedIn(true);
     })
     .catch(function(error){
       console.log('error',error);
@@ -76,10 +76,10 @@ function loginFunction(e){
   firebase
     .auth()
     .signInWithEmailAndPassword(email,password)
-    .then(function(response){
+    .then(function(response) {
       setLoggedIn(true);
     })
-    .catch(funtion(error){
+    .catch(function(error) {
       console.log('error',error);
     });
 }
@@ -110,6 +110,7 @@ console.log("testing user two: ", user);
         <Route exact path="/sign-up">
           {loggedIn ? <Redirect to="/"/> : <Signup signupFunction={signupFunction} />}
         </Route>
+
       </Router>
     </div>
   );
