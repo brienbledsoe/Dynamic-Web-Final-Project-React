@@ -5,6 +5,7 @@ import {Route,BrowserRouter as Router, Redirect} from 'react-router-dom'
 import Header from "./components/Header";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
+import Pagewrapper from "./components/Pagewrapper";
 import UserProfile from "./pages/UserProfile";
 import  * as firebase from "firebase/app";
 import "firebase/auth";
@@ -98,20 +99,22 @@ function logoutFunction(){
 console.log("testing user two: ", user)
 //console.log("logging Author: ",firebase.auth())
   return (
+
     <div className="App">
     <Header loggedIn={loggedIn} logoutFunction={logoutFunction}/>
       <Router>
 
       <Route exact path="/">
-        { loggedIn ? <UserProfile user={user}/> : <Redirect to="login" />}
+        { loggedIn ? <Pagewrapper loggedIn="true"><UserProfile user={user}/></Pagewrapper> :  <Pagewrapper loggedIn="false"><Redirect to="login" /></Pagewrapper>}
       </Route>
 
-        <Route exact path="/login">
-          { loggedIn ? <Redirect to="/"/> : <Login loginFunction={loginFunction} />}
+        <Route exact path="/login" >
+          { loggedIn ? <Redirect to="/"/> :  <Pagewrapper loggedIn="false"><Login loginFunction={loginFunction}/></Pagewrapper>}
         </Route>
 
+
         <Route exact path="/sign-up">
-          { loggedIn ? <Redirect to="/"/> : <Signup signupFunction={signupFunction} />}
+          { loggedIn ? <Redirect to="/"/>: <Pagewrapper loggedIn="false"><Signup signupFunction={signupFunction}/></Pagewrapper>}
         </Route>
 
       </Router>

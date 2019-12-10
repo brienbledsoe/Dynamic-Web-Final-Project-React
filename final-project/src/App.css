@@ -1,22 +1,52 @@
-.App {
-  text-align: center;
+
+.Header{
+  padding: 0px 25px;
+  border-bottom: 1px solid black;
+  font-size: 12px;
 }
 
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.Header nav{
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  display: flex;
+  justify-content: flex-end;
+  padding: 10 px;
+
 }
 
-.App-link {
-  color: #09d3ac;
+.Header nav a{
+  color: black;
+  display: inline-block;
+  padding: 5px 15px;
+  text-decoration: none;
 }
+
+#UserProfile{
+  margin-top: -20px; /*not sure why I have to adjust this*/
+}
+
+
+.loginBackground{
+  background-color: #e8e8e8;
+}
+
+.pagebackground{
+  background-color: red;
+}
+
+.flex-container{
+  width: 20%;
+  margin: 10% auto;
+  /* text-align: left; */
+  border: 2px solid #6c7a89;
+  border-radius: 4px;
+  display: flex;
+  height: 200px;
+  flex-direction: column;
+  justify-content: center;
+
+
+}
+
+/* .flex-container input[type=email]{
+  align-content: center;
+} */
