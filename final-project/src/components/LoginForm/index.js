@@ -9,7 +9,7 @@ export default function LoginForm({submitFunction}) {
         </div>
 
         <div><input type="email" name="loginEmail" placeholder="Email"/></div>
-
+        
 
 
         <div>

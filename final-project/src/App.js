@@ -3,6 +3,7 @@ import './App.css';
 import React, {useEffect,useState} from 'react';
 import {Route,BrowserRouter as Router, Redirect} from 'react-router-dom'
 import Header from "./components/Header";
+import CreatePosts from "./pages/createPosts";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Pagewrapper from "./components/Pagewrapper";
@@ -117,6 +118,9 @@ console.log("testing user two: ", user)
           { loggedIn ? <Redirect to="/"/>: <Pagewrapper loggedIn="false"><Signup signupFunction={signupFunction}/></Pagewrapper>}
         </Route>
 
+        <Route extact path="/create-posts">
+          {loggedIn ? <Pagewrapper loggedIn="true"><CreatePosts user={user}/></Pagewrapper> : <Pagewrapper loggedIn="false"><Login loginFunction={loginFunction}/></Pagewrapper>}
+        </Route>
       </Router>
     </div>
   );
