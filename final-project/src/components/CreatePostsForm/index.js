@@ -15,8 +15,8 @@ export default function CreatePosts({uid}){
       let year = e.currentTarget.year.value
       let major = e.currentTarget.major.value
       let question = e.currentTarget.question.value
-
-      axios.post('https://dynamic-web-final-project.herokuapp.com/posts', {
+      //removing .value to see if anything happens
+      axios.post('https://dynamic-web-final-project.herokuapp.com/submit', {
         currYear: year,
         salary: salary,
         name: name,
