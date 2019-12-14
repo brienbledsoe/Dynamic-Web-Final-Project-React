@@ -3,23 +3,12 @@ export default function LoginForm({submitFunction}) {
   return(
 
     <div>
-      <form className="flex-container" onSubmit ={(e) => {submitFunction(e)}}>
-        <div>
+      <form className="loginForm" onSubmit ={(e) => {submitFunction(e)}}>
         <label htmlFor="loginEmail">Email</label>
-        </div>
-
-        <div><input type="email" name="loginEmail" placeholder="Email"/></div>
-        
-
-
-        <div>
+        <input type="email" name="loginEmail" placeholder="Email"/>
         <label htmlFor="loginPassword">Password</label>
-        </div>
-
-        <div><input className="pass"type="password" name="loginPassword" placeholder="Password"/></div>
-
-
-        <div><button>Log in</button></div>
+        <input className="pass"type="password" name="loginPassword" placeholder="Password"/>
+        <button id="loginButton">Login</button>
       </form>
     </div>
 

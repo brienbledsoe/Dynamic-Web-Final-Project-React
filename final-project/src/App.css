@@ -1,4 +1,62 @@
+/*===================================================================================================================================================*/
+/*styling for userPosts in userProfile page*/
 
+ul {
+  display: flex;
+  flex-direction: column;
+  background-color: #4D6680;
+  flex-wrap: wrap;
+  /*align-items:center*/
+  list-style-type: none;
+  /* margin: 2rem auto; */
+  margin-bottom: 10px;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 5px;
+  height:140px;
+  font-family: sans-serif;
+
+}
+
+li {
+  border: 1px solid black;
+  margin: 0.1em;
+  padding: 0.5em;
+  background-color: #e4f1fe;
+  border-radius: 5px;
+}
+
+#box1{
+
+}
+
+#box2{
+
+}
+
+.signInDate{
+  display: flex;
+  flex-direction: row;
+  background-color: #e4f1fe;
+  text-align: center;
+  border: 2px solid black;
+  height: 10px;
+  /* padding-top: -2rem; */
+  padding: 10px;
+  justify-content: center;
+  /* margin: 2rem auto; */
+}
+
+.signInBox1{
+align-self: center;
+font-size: 12px;
+}
+
+
+
+/*====================================================================================================================================================*/
 .Header{
   padding: 0px 25px;
   border-bottom: 1px solid black;
@@ -13,6 +71,7 @@
 
 }
 
+
 .Header nav a{
   color: black;
   display: inline-block;
@@ -20,10 +79,150 @@
   text-decoration: none;
 }
 
+/*============================================================================================================================================================*/
+/*styling the create posts form*/
+
+#refreshWarning {
+  text-align: center;
+  font-size: 15px;
+  text-shadow: 5px;
+  font-family: sans-serif;
+}
+
+.createPostsForm {
+  max-width: 500px;
+  margin: 2rem auto;
+  border: 4px solid #e4f1fe;
+  border-radius: 5px;
+  padding: 2rem;
+  font-family: sans-serif;
+
+
+
+}
+
+.createPostsForm label {
+  display: block;
+  padding: 1rem 0 .25rem;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.createPostsForm input{
+  display: block;
+  width: 100%;
+  border: 2px solid #E4F1FE;
+  border-radius: 9px;
+  padding: .3rem;
+  font-size: 9px;
+}
+
+
+#sendButton{
+  border: 0;
+  background-color: #e4f1fe;
+  border-radius: 10px;
+  padding: .5rem;
+  color: #425E75;
+  margin: 2rem 35%;
+  text-transform: uppercase;
+  cursor: pointer;
+
+
+}
+
+#sendButton:hover{
+  background-color: #C5E0E8;
+  opacity: .5;
+}
+
+
+
+
+/*=============================================================================================================================================================*/
+/*styling for login form*/
+.loginForm {
+  max-width: 300px;
+  margin: 2rem auto;
+  border: 4px solid #e4f1fe;
+  border-radius: 5px;
+  padding: 2rem;
+  font-family: sans-serif;
+  height: 160px;
+
+
+
+}
+
+.loginForm label {
+  display: block;
+  padding: 1rem 0 .25rem;
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.loginForm input{
+  display: block;
+  width: 100%;
+  border: 2px solid #E4F1FE;
+  border-radius: 9px;
+  padding: .3rem;
+  font-size: 9px;
+}
+
+
+#loginButton{
+  border: 0;
+  font-size: 12px;
+  width: 40%;
+  background-color: #e4f1fe;
+  border-radius: 10px;
+  padding: .5rem;
+  color: #425E75;
+  margin: 2rem 30%;
+  text-transform: uppercase;
+  cursor: pointer;
+
+
+}
+
+#loginButton:hover{
+  background-color: #C5E0E8;
+  opacity: .5;
+}
+
+#signupButton{
+  border: 0;
+  font-size: 12px;
+  width: 50%;
+  background-color: #e4f1fe;
+  border-radius: 10px;
+  padding: .5rem;
+  color: #425E75;
+  margin: 2rem 30%;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+#signupButton:hover{
+  background-color: #C5E0E8;
+  opacity: .5;
+}
+
+/*================================================================================================================================================================*/
+
 #UserProfile{
   margin-top: -20px; /*not sure why I have to adjust this*/
 }
 
+.userPosts {
+  text-align: center;
+  font-size: 20px;
+}
+.userprofilegreet{
+  text-align: center;
+}
 
 .loginBackground{
   background-color: #e8e8e8;
@@ -33,6 +232,7 @@
   background-color: red;
 }
 
+/*=====================================================================================================================*/
 .flex-container{
   width: 20%;
   margin: 10% auto;
